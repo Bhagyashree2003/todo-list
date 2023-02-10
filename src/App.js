@@ -1,11 +1,14 @@
 import Navbar from "./Component/Navbar";
-import TodoCard from "./Component/TodoCard";
+import TodoCardItem from "./Component/TodoCardItem";
+import TodoContextProvider from "./Context/TodoContext";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <TodoCard />
+      <TodoContextProvider>
+        <Navbar />
+        <TodoCardItem />
+      </TodoContextProvider>
     </>
   );
 }
